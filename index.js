@@ -6,9 +6,6 @@ const path = require('path');
 const fs = require('fs/promises');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
-const openApiDoc = require('./openapi.json');
-const swaggerUi = require('swagger-ui-express');
-const swaggerJsdoc = require('swagger-jsdoc');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -21,29 +18,6 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 let urlDatabase = {};
-
-const options = {
-  customSiteTitle: 'Shortin API',
-  customfavIcon: 'https://shrtlink.miftahganzz.repl.co/assets/img/favicon.png',
-  customCss: '.swagger-ui .topbar { display: none }',
-  swaggerOptions: {
-    docExpansion: 'none',
-    defaultModelRendering: 'model',
-    displayRequestDuration: true,
-    dom_id: '#swagger-ui',
-    deepLinking: true,
-    validatorUrl: null,
-    favicon: 'https://shrtlink.miftahganzz.repl.co/assets/img/favicon.png',
-  },
-};
-
-if (!openApiDoc.hasOwnProperty('servers')) {
-  openApiDoc.servers = [
-    {
-      url: 'https://shrtlink.miftahganzz.repl.co/'
-    }
-  ];
-}
 
 // Function
 async function readUrls() {
@@ -80,25 +54,23 @@ app.get('/contact', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'contac.html'));
 });
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openApiDoc, options, openApiDoc));
-
 // fitur kek nya
 app.post('/send-email', (req, res) => {
   const { name, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({
-    host: "smtp.zoho.com",
+    host: "smtp.gmail.com",
     port: 465,
     secure: true,
     auth: {
-      user: "noreply@api-miftah.xyz",
-      pass: "1DepNz5nNund",
+      user: "your_username",
+      pass: "pass",
     },
   });
 
   const mailOptions = {
-    from: "noreply@api-miftah.xyz",
-    to: 'miftahganzz01@gmail.com',
+    from: "your_gmail_smtp",
+    to: 'your_gmail@gmail.com',
     subject: `Message from ${name}`,
     text: message,
     replyTo: email,
