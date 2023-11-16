@@ -114,6 +114,10 @@ app.get('/shortlink', async (req, res) => {
   const shortUrl = shortid.generate();
   const createdDate = new Date().toISOString();
 
+  if (!originalUrl) {
+    return res.status(400).json({ error: 'URL parameter is missing' });
+  }
+
   urlDatabase[shortUrl] = {
     originalUrl: originalUrl,
     shortUrl: `https://${req.get('host')}/${shortUrl}`,
