@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Short'in is a platform for turning long URLs into short, memorable versions.
+    This helps create more concise and shareable links.
+    With Short'in, you can create links that are shorter than the original URL and can customize them as you wish.">
+  <meta name="keywords" content="short'in, short'in website, shortlink, shortener, short web, perpendek url">
+  <meta name="author" content="Miftah GanzZ">
+  <meta name="robots" content="index,follow">
+  <meta name="language" content="en">
+
+  <!-- Search Engine -->
+  <meta name="google-site-verification" content="Kode Verifikasi Google">
+  <meta name="googlebot" content="index,follow">
+  <meta name="google" content="nositelinkssearchbox">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shortin.my.id">
+  <meta property="og:title" content="Short'in Website">
+  <meta property="og:description" content="Short'in is a platform for turning long URLs into short, memorable versions.
+    This helps create more concise and shareable links.
+    With Short'in, you can create links that are shorter than the original URL and can customize them as you wish.">
+  <meta property="og:image" content="https://shortin.my.id/assets/img/favicon.png">
+  <meta property="og:image:alt" content="Short'in Icon">
+  <meta property="og:site_name" content="Short'in Website">
+  <meta property="og:locale" content="en_US">
+  
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <title>Short'in - Website Shortlink</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+</head>
+
+  <body>
+    <div class="container">
+      <h1>Short'in</h1>
+      <div class="form-container">
+        <div class="form-group">
+          <input type="text" class="form-control" id="customInput" placeholder="Enter Alias (opsional)">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="urlInput" placeholder="Enter your Long URL">
+        </div>
+        <button class="btn btn-primary" onclick="shortenUrl()">Shorten</button>
+      </div>
+      <div id="result" class="mt-3"></div>
+      <div class="dropdown" style="position: absolute; top: 20px; right: 20px;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Options
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#" onclick="filterShortUrls('url')">URL</a>
+          <a class="dropdown-item" href="#" onclick="filterShortUrls('cn')">CN</a>
+          <a class="dropdown-item" href="#" onclick="filterShortUrls('all')">All</a>
+        </div>
+      </div>
+      <div id="shortUrlList" class="short-url-list">
+      </div>
+      <footer class="footer-container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <h4>About Us</h4>
+              <p>Short'in is a platform for turning long URLs into short, memorable versions.
+              This helps create more concise and shareable links.
+              With Short'in, you can create links that are shorter than the original URL and can customize them as you wish.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="/terms">Terms of Use</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/api-docs">API</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+              <h4>Contact Information</h4>
+              <p><i ></i></p>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-12 text-center">
+              <p class="footer-text">&copy; 2023 Short'in. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="assets/js/index.js"></script>
+  </body>
+
+</html>

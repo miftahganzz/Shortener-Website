@@ -1,0 +1,162 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #222;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out;
+  width: 70%;
+  max-width: 500px;
+  margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.form-group input {
+  width: calc(100% - 20px);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  background-color: #222;
+  color: #fff;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+}
+
+.btn-primary {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ff0000;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 6px rgba(255, 0, 0, 0.3);
+}
+
+.btn-primary:active {
+  transform: scale(0.9);
+}
+
+.short-url-list {
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #222;
+}
+
+.short-url-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  padding: 10px 0;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(255, 0, 0, 0.3);
+}
+
+.short-url-item:last-child {
+  border-bottom: none;
+}
+
+.short-url-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 8px 12px rgba(255, 0, 0, 0.6);
+}
+
+.delete-icon {
+  color: red;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.short-url-item:hover .delete-icon {
+  opacity: 1;
+}
+
+footer.footer-container {
+  color: #fff;
+  padding: 0;
+  height: 5px;
+  width: 100%;
+  margin-top: 35px;
+}
+
+footer.footer-container .row {
+  margin: 0;
+}
+
+footer.footer-container .col-lg-4,
+footer.footer-container .col-md-6,
+footer.footer-container .col-sm-12 {
+  padding: 0;
+}
+
+footer.footer-container h4 {
+  color: #ff0000;
+}
+
+footer.footer-container p {
+  color: #ccc;
+}
+
+footer.footer-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer.footer-container ul li {
+  margin-bottom: 8px;
+}
+
+footer.footer-container a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer.footer-container a:hover {
+  color: #ff0000;
+}
+
+footer.footer-container .mt-4 {
+  padding-top: 5px;
+}
+
+footer.footer-container p.footer-text {
+  margin: 0;
+}

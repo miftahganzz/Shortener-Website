@@ -1,0 +1,22 @@
+{
+  "name": "Shortin",
+  "version": "1.0.0",
+  "description": "Shortin Website",
+  "main": "index.js",
+  "scripts": {
+    "star": "node index.js"
+  },
+  "keywords": ["shortin", "shortener", "shortlink", "Miftah GanzZ"],
+  "author": "Miftah GanzZ",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^18.0.6",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "node-fetch": "^3.2.6",
+    "nodemailer": "^6.9.7",
+    "shortid": "^2.2.16",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  }
+}
