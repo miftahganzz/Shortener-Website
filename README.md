@@ -18,7 +18,7 @@ This is a simple web application called Short'in that allows users to create cus
 - **Customization**: Users can create custom aliases for their short URLs.
 - **Redirection**: Shortened links redirect users to the original long URLs.
 - **Link Management**: Ability to view, delete, and organize created short URLs.
-- **API**: Acces From API [Short'in]("https://shortin.my.id/shortlink?url=")
+- **API**: Acces From API [Short'in](https://shortin.my.id/shortlink?url=)
 
 ## Tech & Tools
 <p align="left"> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" height="40" alt="bootstrap logo"  />
